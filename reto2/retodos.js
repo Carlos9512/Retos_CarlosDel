@@ -10,7 +10,7 @@ function e1CalcularNota() {
     e1nota2 = document.getElementById("e1nota2").value;
     e1nota3 = document.getElementById("e1nota3").value;
     e1nota4 = document.getElementById("e1nota4").value;
-    e1table11numeroa = document.getElementById("e1tabla")
+    e1tabla = document.getElementById("e1tabla")
     e1resultado = document.getElementById("e1resultado")
     e1tabla.innerHTML = ""
     e1resultado.innerHTML = ""
@@ -25,7 +25,7 @@ function e1CalcularNota() {
         e1tabla.innerHTML += "<tr><td>" + e1nota2 + "</td><td>" + e1LetraValor(e1nota2) + "</td></tr>";
         e1tabla.innerHTML += "<tr><td>" + e1nota3 + "</td><td>" + e1LetraValor(e1nota3) + "</td></tr>";
         e1tabla.innerHTML += "<tr><td>" + e1nota4 + "</td><td>" + e1LetraValor(e1nota4) + "</td></tr>";
-        e1resultado.innerHTML = "Note11numeroa final: " + e1promedio + " Puntuación " + e1LetraValor(e1promedio)
+        e1resultado.innerHTML = "Nota final: " + e1promedio + " Puntuación " + e1LetraValor(e1promedio)
     } else {
         Toast.fire({
             type: 'error',
@@ -55,12 +55,12 @@ function e2CalcularFuerza() {
     e2potenciade8 = Math.pow(10, -8);
     var e2masa1 = document.getElementById("e2masa1").value;
     var e2masa2 = document.getElementById("e2masa2").value;
-    var e2distancie11numeroa = document.getElementById("e2distancia").value;
+    var e2distancia = document.getElementById("e2distancia").value;
     e2resultado = document.getElementById("e2resultado")
     e2resultado.innerHTML = ""
-    if (e2masa1 > 0 && e2masa2 > 0 && e2distancie11numeroa > 0) {
-        e2fuerze11numeroa = (parseFloat(6.673 * e2potenciade8) * parseFloat(e2masa1) * parseFloat(e2masa2)) / (Math.pow(e2distancia, 2));
-        e2resultado.innerHTML = 'Le11numeroa fuerze11numeroa entre las masas es de : ' + e2fuerze11numeroa + " dinas";
+    if (e2masa1 > 0 && e2masa2 > 0 && e2distancia > 0) {
+        e2fuerza = (parseFloat(6.673 * e2potenciade8) * parseFloat(e2masa1) * parseFloat(e2masa2)) / (Math.pow(e2distancia, 2));
+        e2resultado.innerHTML = 'La fuerza entre las masas es de : ' + e2fuerza + " dinas";
     } else {
         Toast.fire({
             type: 'error',
@@ -73,33 +73,33 @@ function e3CalcularEnergia() {
 
     var e3potenciade10 = Math.pow(10, 10);
     var e3velocidadLuz = 2.997925 * e3potenciade10;
-    var e3mase11numeroa = document.getElementById("e3masa").value;
+    var e3masa = document.getElementById("e3masa").value;
     e3resultado = document.getElementById("e3resultado")
     e3resultado.innerHTML = ""
 
     if (parseFloat(e3masa) > 0) {
-        e3energie11numeroa = parseFloat(e3masa) * (Math.pow(e3velocidadLuz, 2))
-        e3resultado.innerHTML = 'Le11numeroa energíe11numeroa es ' + e3energie11numeroa + ' ergios';
+        e3energia = parseFloat(e3masa) * (Math.pow(e3velocidadLuz, 2))
+        e3resultado.innerHTML = 'La energía es ' + e3energia + ' ergios';
     } else {
         Toast.fire({
             type: 'error',
-            title: 'Le11numeroa mase11numeroa debe ser un entero positivo'
+            title: 'La masa debe ser un entero positivo'
         })
     }
 }
 
 function e4CalcularHipotenusa() {
 
-    var e4ladoe11numeroa = document.getElementById("e4ladoa").value;
-    var e4ladoe11numerob = document.getElementById("e4ladob").value;
+    var e4ladoa = document.getElementById("e4ladoa").value;
+    var e4ladob = document.getElementById("e4ladob").value;
     e4resultado = document.getElementById("e4resultado")
     e4resultado.innerHTML = ""
-    var e4Ladoe11numeroa = parseFloat(e4ladoa);
-    var e4Ladoe11numerob = parseFloat(e4ladob);
-    if (e4Ladoe11numeroa > 0 && e4Ladoe11numerob > 0) {
-        e4hipotenuse11numeroa = Math.sqrt(Math.pow(e4Ladoa, 2) + Math.pow(e4Ladob, 2));
+    var e4Ladoa = parseFloat(e4ladoa);
+    var e4Ladob = parseFloat(e4ladob);
+    if (e4Ladoa > 0 && e4Ladob > 0) {
+        e4hipotenusa = Math.sqrt(Math.pow(e4Ladoa, 2) + Math.pow(e4Ladob, 2));
 
-        e4resultado.innerHTML = 'Le11numeroa hipotenuse11numeroa es ' + e4hipotenuse11numeroa + ' centimetros';
+        e4resultado.innerHTML = 'La hipotenusa es ' + e4hipotenusa + ' centimetros';
     } else {
         Toast.fire({
             type: 'error',
@@ -110,18 +110,18 @@ function e4CalcularHipotenusa() {
 
 function e5CalcularArea() {
 
-    var e5ladoe11numeroa = document.getElementById("e5ladoa").value;
-    var e5ladoe11numerob = document.getElementById("e5ladob").value;
-    var e5ladoe11numeroc = document.getElementById("e5ladoc").value;
+    var e5ladoa = document.getElementById("e5ladoa").value;
+    var e5ladob = document.getElementById("e5ladob").value;
+    var e5ladoc = document.getElementById("e5ladoc").value;
     e5resultado = document.getElementById("e5resultado")
     e5resultado.innerHTML = ""
-    var e5Ladoe11numeroa = parseFloat(e5ladoa);
-    var e5Ladoe11numerob = parseFloat(e5ladob);
-    var e5Ladoe11numeroc = parseFloat(e5ladoc);
-    if (e5Ladoe11numeroa > 0 && e5Ladoe11numerob > 0 && e5Ladoe11numeroc > 0) {
-        e5p = (e5Ladoe11numeroa + e5Ladoe11numerob + e5Ladoc) / 2;
-        e5aree11numeroa = Math.sqrt(e5p * (e5p - e5Ladoa) * (e5p - e5Ladob) * (e5p - e5Ladoc));
-        e5resultado.innerHTML = 'El aree11numeroa del triangulo es ' + e5aree11numeroa + ' centimetros';
+    var e5Ladoa = parseFloat(e5ladoa);
+    var e5Ladob = parseFloat(e5ladob);
+    var e5Ladoc = parseFloat(e5ladoc);
+    if (e5Ladoa > 0 && e5Ladob > 0 && e5Ladoc > 0) {
+        e5p = (e5Ladoa + e5Ladob + e5Ladoc) / 2;
+        e5area = Math.sqrt(e5p * (e5p - e5Ladoa) * (e5p - e5Ladob) * (e5p - e5Ladoc));
+        e5resultado.innerHTML = 'El area del triangulo es ' + e5area + ' centimetros';
     } else {
         Toast.fire({
             type: 'error',
@@ -131,7 +131,7 @@ function e5CalcularArea() {
 }
 
 function e6CalcularHora() {
-    var e6hore11numeroa = document.getElementById("e6hora").value;
+    var e6hora = document.getElementById("e6hora").value;
     e6resultado = document.getElementById("e6resultado")
     e6resultado.innerHTML = ""
     var e6horas = e6hora.split(":");
@@ -139,23 +139,23 @@ function e6CalcularHora() {
     if (parseInt(e6horas[0]) >= 0 && parseInt(e6horas[0]) < 24 && parseInt(e6horas[1]) >= 0 && parseInt(e6horas[1]) < 60) {
 
         if (e6horas[0] > 12) {
-            nuevahore11numeroa = parseInt(e6horas[0]) - 12;
+            nuevahora = parseInt(e6horas[0]) - 12;
             ampm = "PM"
         } else {
             if (e6horas[0] == 12)
                 ampm = "PM"
             if (e6horas[0] == 0) {
-                nuevahore11numeroa = "12";
+                nuevahora = "12";
             } else {
-                nuevahore11numeroa = parseInt(e6horas[0]);
+                nuevahora = parseInt(e6horas[0]);
             }
         }
         minutos = parseInt(e6horas[1]);
-        e6resultado.innerHTML = 'El hore11numeroa en formato 12 H es ' + nuevahore11numeroa + ':' + minutos + ' ' + ampm;
+        e6resultado.innerHTML = 'El hora en formato 12 H es ' + nuevahora + ':' + minutos + ' ' + ampm;
     } else {
         Toast.fire({
             type: 'error',
-            title: 'No es el formato correcto pare11numeroa 24H'
+            title: 'No es el formato correcto para 24H'
         })
     }
 }
@@ -163,36 +163,36 @@ function e6CalcularHora() {
 
 function e7CalcularFecha() {
 
-    var e7feche11numeroa = document.getElementById("e7fecha").value;
+    var e7fecha = document.getElementById("e7fecha").value;
     e7resultado = document.getElementById("e7resultado")
     e7resultado.innerHTML = ""
-    var e7nfeche11numeroa = e7fecha.split(" ");
+    var e7nfecha = e7fecha.split(" ");
     var e7meses = ["ENERO", "FEBRERO", "MARZO", "ABRIL", "MaAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"];
-    e7este11numeroa = false
+    e7esta = false
     if (e7nfecha.length == 3) {
-        fechadie11numeroa = parseInt(e7nfecha[0]);
+        fechadia = parseInt(e7nfecha[0]);
         fechames = e7nfecha[1];
         fechan = fechames.toUpperCase();
         fechaano = parseInt(e7nfecha[2]);
 
         for (i = 0; i < 12; i++) {
             if (e7meses[i] == fechan) {
-                e7este11numeroa = true
+                e7esta = true
                 fechan = i + 1;
             }
         };
         if (e7esta) {
-            e7resultado.innerHTML = 'Le11numeroa feche11numeroa es ' + fechadie11numeroa + ' ' + fechan + ' ' + fechaano;
+            e7resultado.innerHTML = 'La fecha es ' + fechadia + ' ' + fechan + ' ' + fechaano;
         } else {
             Toast.fire({
                 type: 'error',
-                title: 'Formato incorrecto pare11numeroa le11numeroa entrada'
+                title: 'Formato incorrecto para la entrada'
             })
         }
     } else {
         Toast.fire({
             type: 'error',
-            title: 'Formato incorrecto pare11numeroa le11numeroa entrada'
+            title: 'Formato incorrecto para la entrada'
         })
     }
 
@@ -250,7 +250,7 @@ function e8CalcularNumero() {
     } else {
         Toast.fire({
             type: 'error',
-            title: 'Formato incorrecto pare11numeroa le11numeroa entrada'
+            title: 'Formato incorrecto para la entrada'
         })
     }
 }
@@ -261,17 +261,17 @@ function e9CalcularCirculo(opcion) {
     e9resultado.innerHTML = ""
     var e9diametro = 0;
     console.log(e9radio)
-    var e9aree11numeroa = 0;
-    var e9circunferencie11numeroa = 0;
+    var e9area = 0;
+    var e9circunferencia = 0;
     if (e9radio > 0) {
         switch (opcion) {
             case 1:
-                e9circunferencie11numeroa = 2 * e9radio * (Math.PI);
-                e9resultado.innerHTML = 'Le11numeroa circunferencie11numeroa del circulo es ' + e9circunferencia;
+                e9circunferencia = 2 * e9radio * (Math.PI);
+                e9resultado.innerHTML = 'La circunferencia del circulo es ' + e9circunferencia;
                 break;
             case 2:
-                e9aree11numeroa = (Math.pow(e9radio, 2)) * (Math.PI);
-                e9resultado.innerHTML = 'El aree11numeroa del circulo es ' + e9area;
+                e9area = (Math.pow(e9radio, 2)) * (Math.PI);
+                e9resultado.innerHTML = 'El area del circulo es ' + e9area;
                 break;
             case 3:
                 e9diametro = e9radio * 2;
@@ -283,7 +283,7 @@ function e9CalcularCirculo(opcion) {
     } else {
         Toast.fire({
             type: 'error',
-            title: 'El radio debe ser entero positivo mayor e11numeroa 0'
+            title: 'El radio debe ser entero positivo mayor a 0'
         })
     }
 }
@@ -423,20 +423,20 @@ function e10CalcularNumero() {
 }
 
 function e11CalcularCentena() {
-    var e11numeroa = document.getElementById("e11numeroa").value;
-    var e11numerob = document.getElementById("e11numerob").value;
-    var e11numeroc = document.getElementById("e11numeroc").value;
-    var e11numerod = document.getElementById("e11numerod").value;
+    var e11a = document.getElementById("e11numeroa").value;
+    var e11b = document.getElementById("e11numerob").value;
+    var e11c = document.getElementById("e11numeroc").value;
+    var d = document.getElementById("e11numerod").value;
     e11resultado = document.getElementById("e11resultado")
     e11resultado.innerHTML = ""
-    if (e11numerob.length == 1 && e11numeroc.length == 1 && e11numerod.length == 1) {
-        if (e11numeroc < 5) {
-            e11resultado.innerHTML = 'La decena mas cercana es: ' + e11numeroa + e11numerob + '00';
+    if (e11b.length == 1 && e11c.length == 1 && d.length == 1) {
+        if (e11c < 5) {
+            e11resultado.innerHTML = 'La decena mas cercana es: ' + e11a + e11b + '00';
         } else {
-            if (e11numerob == 9) {
-                e11resultado.innerHTML = 'La decena mas cercana es: '(parseInt(e11numeroa) + 1) + '000';
+            if (e11b == 9) {
+                e11resultado.innerHTML = 'La decena mas cercana es: '(parseInt(e11a) + 1) + '000';
             } else {
-                e11resultado.innerHTML = 'La decena mas cercana es: ' + e11numeroa + (parseInt(e11numerob) + 1) + '00';
+                e11resultado.innerHTML = 'La decena mas cercana es: ' + a + (parseInt(e11b) + 1) + '00';
             }
         }
     } else {
@@ -616,7 +616,7 @@ function e17CalcularCambio() {
             e17cambio += billete10 + " Billetes de 10.000 <br>"
         }
         while (e17dinero >= 5000) {
-            e17dinero = e17dinero - 2000;
+            e17dinero = e17dinero - 5000;
             billete5++
         }
         if (billete5 > 0) {
@@ -678,10 +678,10 @@ function e18CalcularNumero() {
     e18resultado = document.getElementById("e18resultado")
     e18resultado.innerHTML = ""
     if (e18numero > 0) {
-        e18resultado.innerHTML = 'El numero ' + e18numero + ' es positivo';
+        e18resultado.innerHTML = 'El numero ' + e18numero + ' es mayor que 0';
     } else if (e18numero == 0) {
         e18resultado.innerHTML = 'El numero es 0';
     } else {
-        e18resultado.innerHTML = 'El numero ' + e18numero + ' es negativo';
+        e18resultado.innerHTML = 'El numero ' + e18numero + ' es menor que 0';
     }
 }
