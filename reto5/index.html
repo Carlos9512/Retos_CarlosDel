@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="styleSheet" href="./estilosreto5.css" type="text/css" media=screen>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Reto 5 </title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand ml-5" href="#">BOOTCAMP</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link ml-3" href="../index.html">Reto 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../reto2/index.html">Reto 2 </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../reto3/index.html">Reto 3 </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../reto4/index.html">Reto 4 </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Reto 5 </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="factura">
+        <br>
+        <center>
+            <h1>Ingrese los datos de la Factura </h1><br>
+        </center>
+        <div class="row">
+            <div class="col-1">
+            </div>
+            <div class="col-5 col-xs-5 col-sm-3">
+                <div class="shadow p-3 mb-5 p-4 bg-white rounded">
+                    <form @submit.prevent="submit" action="" method="get">
+                        <div class="form-group mb-4">
+                            <input class="form-control" type="text" id="nombre" name="nombre" v-model="nombre" required>
+                            <label class="form-control-placeholder" for="nombre">Cliente</label>
+                        </div>
+                        <div class="form-group mb-4">
+                            <input class="form-control" type="text" id="cedula" name="cedula" v-model="cedula" required>
+                            <label class="form-control-placeholder" for="cedula">Cedula</label>
+                        </div>
+                        <div class="form-group mb-4">
+                            <input class="form-control" type="text" id="correo" name="correo" v-model="correo" required>
+                            <label class="form-control-placeholder" for="correo">Correo</label>
+                        </div>
+                        <div class="form-group mb-4">
+                            <input class="form-control" type="text" id="nombreproducto" name="nombreproducto"
+                                v-model="nombreproducto" required>
+                            <label class="form-control-placeholder" for="nombreproducto">Producto</label>
+                        </div>
+                        <div class="form-group mb-4">
+                            <input class="form-control" type="number" id="idproducto" name="idproducto"
+                                v-model="idproducto" required>
+                            <label class="form-control-placeholder" for="idproducto">ID Producto</label>
+                        </div>
+                        <div class="form-group mb-4">
+                            <input class="form-control" type="number" id="precio" name="precio" v-model="precio"
+                                required>
+                            <label class="form-control-placeholder" for="precio">Precio Unitario</label>
+                        </div>
+                        <div class="form-group mb-4">
+                            <input class="form-control" type="number" id="cantidad" name="cantidad" v-model="cantidad"
+                                required>
+                            <label class="form-control-placeholder" for="cantidad">Cantidad</label>
+                        </div>
+                        <div class="form-group mb-4">
+                            <input class="form-control" type="number" id="descuento" name="descuento"
+                                v-model="descuento" max="100" required>
+                            <label class="form-control-placeholder" for="descuento">Descuento</label>
+                        </div>
+                        <center>
+                            <button class="btn btn-outline-success" type="submit">Facturar</button></center>
+                    </form>
+                    <br>
+                </div>
+            </div>
+            <div class="col">
+                <div class="shadow p-3 mb-5 bg-white rounded">
+                    <center>
+                        <h5>Total de todos los productos: {{gtotal|numero}}<h5>
+                    </center>
+                    <hr><br>
+                    <div class="row ml-1 mt-2">
+                        <div class="col-5">Cliente: {{nombre}}</div>
+                        <div class="col-3">Cedula: {{cedula}}</div>
+                        <div class="col-4">Correo: {{correo}}</div>
+                    </div>
+                    <hr>
+                    <div class="row ml-1">
+                        <div class="col-5">Producto: {{nombreproducto}}</div>
+                        <div class="col-2">ID: {{idproducto}}</div>
+                        <div class="col-2">Precio: ${{precio}}</div>
+                        <div class="col-3">Cantidad: {{cantidad}}</div>
+                    </div>
+                    <hr>
+                    <div class="row ml-1">
+                        <div class="col-5">Subtotal: ${{precio*cantidad}} </div>
+                        <div class="col-3">IVA: ${{precio*cantidad*0.19|numero}}</div>
+                        <div class="col-4">Descuento: ${{(precio*cantidad+precio*cantidad*0.19)*(descuento/100)|numero}}
+                            ({{descuento}}%)</div>
+                    </div>
+                    <hr>
+                    <h3>
+                        <p class="text-right mr-5 mt-3 mb-0">Total:
+                            {{(((precio*cantidad)+(precio*cantidad*0.19))-((precio*cantidad)*(descuento/100)))|numero}}
+                        </p>
+                    </h3>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <center>
+                            <thead>
+                                <th>Producto</th>
+                                <th>Cantidad</th>
+                                <th>Fecha</th>
+                                <th>Total</th>
+                                <th>
+                                    <center>Accion</center>
+                                </th>
+                            </thead>
+                            <tbody id="tablaproductos">
+                                <tr v-for="producto in productos">
+                                    <td>{{producto.nombreproducto}}</td>
+                                    <td>{{producto.cantidad}}</td>
+                                    <td>{{producto.fecha}}</td>
+                                    <td>{{producto.total|numero}}</td>
+                                    <td>
+                                        <button class="btn btn-outline-info" @click="mostrar(producto.idproducto)">
+                                            Detalles
+                                        </button>
+                                        <button class="btn btn-outline-danger"
+                                            @click="eliminar(producto.idproducto, producto.total)">
+                                            Eliminar
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </center>
+                    </table>
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+
+
+
+
+        </template>
+        </form>
+        <modal v-if="showModal" @close="showModal = false">
+            <!--
+                  you can use custom content here to overwrite
+                  default content
+                -->
+            <div slot="cliente">{{productos[idmostrar].nombre}}</div>
+            <div slot="cedula">{{productos[idmostrar].cedula}}</div>
+            <div slot="correo">{{productos[idmostrar].correo}}</div>
+            <div slot="producto">{{productos[idmostrar].nombreproducto}}</div>
+            <div slot="idproducto">{{productos[idmostrar].idproducto}}</div>
+            <div slot="precio">{{productos[idmostrar].precio}}</div>
+            <div slot="cantidad">{{productos[idmostrar].cantidad}}</div>
+            <div slot="subtotal">{{productos[idmostrar].subtotal}}</div>
+            <div slot="iva">{{productos[idmostrar].iva}}</div>
+            <div slot="descuento">{{productos[idmostrar].descuento}}</div>
+            <div slot="total">{{productos[idmostrar].total}}</div>
+        </modal>
+    </div>
+
+    <script type="text/x-template" id="modal-template">
+        <transition name="modal">
+          <div class="modal-mask">
+            <div class="modal-wrapper">
+              <div class="modal-container">          
+                    <br>
+                    <div class="row ml-1">
+                    <div class="col-5">
+                        Cliente: 
+                        <slot name="cliente">
+                            Cliente
+                        </slot>
+                    </div>
+                    <div class="col-3">
+                        Cedula: 
+                        <slot name="cedula">
+                            Cedula
+                        </slot>
+                    </div>
+                    <div class="col-4">
+                        Correo: 
+                        <slot name="correo">
+                            Correo
+                        </slot>
+                    </div>
+                </div>
+                <hr>
+                <div class="row ml-1">
+                    <div class="col-5">
+                        Producto: 
+                        <slot name="producto">
+                            Producto
+                        </slot>
+                    </div>
+                    <div class="col-2">
+                        ID: 
+                        <slot name="idproducto">
+                            ID
+                        </slot>
+                    </div>
+                    <div class="col-2">
+                        Precio: 
+                        <slot name="precio">
+                            Precio
+                        </slot>
+                    </div>
+                    <div class="col-3">
+                        Cantidad: 
+                        <slot name="cantidad">
+                            Cantidad
+                        </slot>
+                    </div>
+                </div>
+                <hr>
+                <div class="row ml-1">
+                    <div class="col-5">
+                        Subtotal: 
+                        <slot name="subtotal">
+                            Subtotal
+                        </slot>
+                    </div>
+                    <div class="col-3">
+                        IVA: 
+                        <slot name="iva">
+                            Iva
+                        </slot>
+                    </div>
+                    <div class="col-4">
+                        Descuento: 
+                        <slot name="descuento">
+                            Descuento
+                        </slot>
+                    </div>
+                </div>
+                <hr>
+                <h3>
+                    <p class="text-right mr-5 mt-3 mb-0">Total:
+                        <slot name="total">
+                            Total
+                        </slot>
+                    </p>
+                </h3>
+                <div class="modal-footer">                                                                       
+                          <button class="btn btn-outline-danger" @click="$emit('close')">
+                            Salir
+                          </button>                               
+                      </div>  
+              </div>
+            </div>
+          </div>
+        </transition>
+      </script>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="./retocinco.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

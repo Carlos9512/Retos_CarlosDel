@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="styleSheet" href="../estilos.css" type="text/css" media=screen>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand ml-5" href="#">BOOTCAMP</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link ml-3" href="../index.html">Reto 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../reto2/index.html">Reto 2</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index.html">Reto 3 </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../reto4/index.html">Reto 4 </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../reto5/index.html">Reto 5 </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+
+
+
+    <div class="row">
+        <div class="col-2">
+            <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link active" id="v-pills-ejer1-tab" data-toggle="pill" href="#v-pills-ejer1" role="tab"
+                    aria-controls="v-pills-ejer1" aria-selected="true">
+                    <center>Ejercicio 1</center>
+                </a>
+                <a class="nav-link" id="v-pills-ejer2-tab" data-toggle="pill" href="#v-pills-ejer2" role="tab">
+                    <center>Ejercicio 2</center>
+                </a>
+                <a class="nav-link" id="v-pills-ejer3-tab" data-toggle="pill" href="#v-pills-ejer3" role="tab"
+                    aria-controls="v-pills-ejer3" aria-selected="false">
+                    <center>Ejercicio 3</center>
+                </a>
+                <a class="nav-link" id="v-pills-ejer4-tab" data-toggle="pill" href="#v-pills-ejer4" role="tab"
+                    aria-controls="v-pills-ejer4" aria-selected="false">
+                    <center>Ejercicio 4</center>
+                </a>
+                <a class="nav-link" id="v-pills-ejer5-tab" data-toggle="pill" href="#v-pills-ejer5" role="tab"
+                    aria-controls="v-pills-ejer5" aria-selected="true">
+                    <center>Ejercicio 5</center>
+                </a>
+                <a class="nav-link" id="v-pills-ejer6-tab" data-toggle="pill" href="#v-pills-ejer6" role="tab"
+                    aria-controls="v-pills-ejer6" aria-selected="false">
+                    <center>Ejercicio 6</center>
+                </a>
+                <a class="nav-link" id="v-pills-ejer7-tab" data-toggle="pill" href="#v-pills-ejer7" role="tab"
+                    aria-controls="v-pills-ejer7" aria-selected="false">
+                    <center>Ejercicio 7</center>
+                </a>
+                <a class="nav-link" id="v-pills-ejer8-tab" data-toggle="pill" href="#v-pills-ejer8" role="tab"
+                    aria-controls="v-pills-ejer8" aria-selected="false">
+                    <center>Ejercicio 8</center>
+                </a>
+                <a class="nav-link " id="v-pills-ejer9-tab" data-toggle="pill" href="#v-pills-ejer9" role="tab"
+                    aria-controls="v-pills-ejer9" aria-selected="true">
+                    <center>Ejercicio 9</center>
+                </a>
+                <a class="nav-link" id="v-pills-ejer10-tab" data-toggle="pill" href="#v-pills-ejer10" role="tab"
+                    aria-controls="v-pills-ejer10" aria-selected="false">
+                    <center>Ejercicio 10</center>
+                </a>
+                <a class="nav-link" id="v-pills-ejer11-tab" data-toggle="pill" href="#v-pills-ejer11" role="tab"
+                    aria-controls="v-pills-ejer11" aria-selected="false">
+                    <center>Ejercicio 11</center>
+                </a>
+                <a class="nav-link" id="v-pills-ejer12-tab" data-toggle="pill" href="#v-pills-ejer12" role="tab"
+                    aria-controls="v-pills-ejer12" aria-selected="false">
+                    <center>Ejercicio 12</center>
+                </a>
+                <a class="nav-link" id="v-pills-ejer13-tab" data-toggle="pill" href="#v-pills-ejer13" role="tab"
+                    aria-controls="v-pills-ejer13" aria-selected="true">
+                    <center>Ejercicio 13</center>
+                </a>
+                <a class="nav-link" id="v-pills-ejer14-tab" data-toggle="pill" href="#v-pills-ejer14" role="tab"
+                    aria-controls="v-pills-ejer14" aria-selected="false">
+                    <center>Ejercicio 14</center>
+                </a>
+                <a class="nav-link" id="v-pills-ejer15-tab" data-toggle="pill" href="#v-pills-ejer15" role="tab"
+                    aria-controls="v-pills-ejer15" aria-selected="false">
+                    <center>Ejercicio 15</center>
+                </a>
+                <a class="nav-link" id="v-pills-ejer16-tab" data-toggle="pill" href="#v-pills-ejer16" role="tab"
+                    aria-controls="v-pills-ejer16" aria-selected="false">
+                    <center>Ejercicio 16</center>
+                </a>
+                <a class="nav-link" id="v-pills-ejer17-tab" data-toggle="pill" href="#v-pills-ejer17" role="tab"
+                    aria-controls="v-pills-ejer17" aria-selected="true">
+                    <center>Ejercicio 17</center>
+                </a>
+            </div>
+        </div>
+        <div class="col-10">
+            <div class="tab-content" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-ejer1" role="tabpanel" aria-labelledby="v-pills-ejer1-tab">
+                    <div class="titulo">
+                        <center>
+                            <h4>Este programa calcula el nuevo salario para un empleado segun su contrato actual</h4>
+                        </center>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-4">
+                            <br>
+                            <div class="form-group row">
+                                <label for="nota1" class="col-sm-5 col-form-label">Salario Actual</label>
+                                <div class="col-sm-7">
+                                    <input type="number" class="form-control" id="e1salario"
+                                        placeholder="Ingrese el salario">
+                                </div>
+                            </div>
+
+                            <br>
+                            <center>
+                                <button type="button" onclick="e1CalcularSalario()"
+                                    class="btn btn-outline-success">Calcular Nuevo Salario</button>
+                            </center>
+                        </div>
+                        <div class="col-6">
+                            <center>
+                                <h4 id="e1resultado"></h4>
+                            </center>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-ejer2" role="tabpanel" aria-labelledby="v-pills-ejer2-tab">
+                    <div class="titulo">
+                        <center>
+                            <h4>El programa calcula el valor de Pi segun el numero de terminos para una sumatoria
+                                infinita</h4>
+                        </center>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-4">
+                            <br>
+                            <div class="form-group row">
+                                <label for="nota1" class="col-sm-4 col-form-label">N° Terminos</label>
+                                <div class="col-sm-8">
+                                    <input type="number" class="form-control" id="e2terminos"
+                                        placeholder="Ingrese la masa en gr">
+                                </div>
+                            </div>
+                            <br>
+                            <center>
+                                <button type="button" onclick="e2CalcularPi()" class="btn btn-outline-success">Calcular
+                                    Pi</button>
+                            </center>
+                        </div>
+                        <div class="col-6">
+                            <br><br>
+                            <center>
+                                <h4 id="e2resultado"></h4>
+                            </center>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-ejer3" role="tabpanel" aria-labelledby="v-pills-ejer3-tab">
+                    <div class="titulo">
+                        <center>
+                            <h4>Este progama muestra el mayor, el menor y la media de N terminos, el valor de N varia
+                            </h4>
+                        </center>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-4">
+                            <br>
+                            <div class="form-group row">
+                                <label for="nota1" class="col-sm-3 col-form-label">Ingrese N</label>
+                                <div class="col-sm-9">
+                                    <input type="number" class="form-control" id="e3nterminos"
+                                        placeholder="Ingrese el numero de terminos">
+                                </div>
+                            </div>
+                            <center>
+                                <button type="button" onclick="e3LlenarN()" class="btn btn-outline-success">Agregar N
+                                    Terminos</button>
+                            </center>
+                            <br>
+                            <div id="e3llenarterminos">
+
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <br>
+                            <center>
+                                <h4 id="e3resultado"></h4>
+                            </center>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-ejer4" role="tabpanel" aria-labelledby="v-pills-ejer4-tab">
+                    <div class="titulo">
+                        <center>
+                            <h4>Este programa regresa la fecha del domingo de pascua para los años entre 1990 y 2000
+                            </h4>
+                        </center>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-4">
+                            <br>
+                            <div class="form-group row">
+                                <label for="nota1" class="col-sm-3 col-form-label">Año</label>
+                                <div class="col-sm-9">
+                                    <input type="number" class="form-control" id="e4ano" placeholder="Ingrese el año">
+                                </div>
+                            </div>
+                            <br>
+                            <center>
+                                <button type="button" onclick="e4CalcularDomingoPascua()"
+                                    class="btn btn-outline-success">Calcular Domingo de Pascua</button>
+                            </center>
+                        </div>
+                        <div class="col-6">
+                            <br>
+                            <center>
+                                <h4 id="e4resultado"></h4>
+                            </center>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-ejer5" role="tabpanel" aria-labelledby="v-pills-ejer5-tab">
+                    <div class="titulo">
+                        <center>
+                            <h4>Este programa determina si un año entre el 1800 y 2000 es bisiesto o no
+                            </h4>
+                        </center>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-4">
+                            <br>
+                            <div class="form-group row">
+                                <label for="nota1" class="col-sm-3 col-form-label">Año</label>
+                                <div class="col-sm-9">
+                                    <input type="number" class="form-control" id="e5ano" placeholder="Ingrese año">
+                                </div>
+                            </div>
+                            <br>
+                            <center>
+                                <button type="button" onclick="e5CalcularBisiesto()"
+                                    class="btn btn-outline-success">Determinar</button>
+                            </center>
+                        </div>
+                        <div class="col-6">
+                            <br>
+                            <center>
+                                <h4 id="e5resultado"></h4>
+                            </center>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-ejer6" role="tabpanel"
+                    aria-labelledby="v-pills-ejer6-tab">
+                    <div class="titulo">
+                        <center>
+                            <h4>Este programa crea un cuadro magico de orden n comprendido entre 3 y 11</h4>
+                        </center>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-4">
+                            <br>
+                            <div class="form-group row">
+                                <label for="nota1" class="col-sm-4 col-form-label">Orden n</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="e6ordenn"
+                                        placeholder="Ingrese el valor de n">
+                                </div>
+                            </div>
+                            <br>
+                            <center>
+                                <button type="button" onclick="e6CalcularCuadroMagico()"
+                                    class="btn btn-outline-success">Crear Cuadro</button>
+                            </center>
+                        </div>
+                        <div class="col-6">
+                            <br>
+                            <center>
+                                <table class="table table-bordered" id="tabla">
+                                    <tbody id="e6resultado">
+
+                                    </tbody>
+                                </table>
+
+                            </center>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-ejer7" role="tabpanel" aria-labelledby="v-pills-ejer7-tab">
+                    <div class="titulo">
+                        <center>
+                            <h4>Este programa calcula los primeros 3 numeros perfectos</h4>
+                        </center>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-4">                            
+                            <center>
+                                <button type="button" onclick="e7CalcularNumerosPerfectos()"
+                                    class="btn btn-outline-success">Calcular Numeros Perfectos</button>
+                            </center>
+                        </div>
+                        <div class="col-6">                         
+                            <center>
+                                <h4 id="e7resultado"></h4>
+                            </center>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-ejer8" role="tabpanel" aria-labelledby="v-pills-ejer8-tab">
+                    <div class="titulo">
+                        <center>
+                            <h4>Este programa calcula el valor e<sup>x</sup> y muestra los primeros 100 valores de la sumatoria con que se calcula</h4>
+                        </center>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-4">
+                            <br>
+                            <div class="form-group row">
+                                <label for="nota1" class="col-sm-2 col-form-label">X</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="e8x"
+                                        placeholder="Ingrese el valor de x">
+                                </div>
+                            </div>
+                            <br>
+                            <center>
+                                <button type="button" onclick="e8CalcularEX()"
+                                    class="btn btn-outline-success">Calcular el valor</button>
+                            </center>
+                        </div>
+                        <div class="col-6">
+                            <br>
+                            <center>
+                                <h4 id="e8resultado"></h4>
+                            </center>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-ejer9" role="tabpanel" aria-labelledby="v-pills-ejer9-tab">
+                    <div class="titulo">
+                        <center>
+                            <h4>Este programa calcula el numero de meses necesarios para producir N parejas de conejos basado en la serie Fibonacci</h4>
+                        </center>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-4">
+                            <br>
+                            <div class="form-group row">
+                                <label for="nota1" class="col-sm-5 col-form-label">Parejas de Conejos</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="e9parejasconejos" placeholder="Ingrese el numero de parejas">
+                                </div>
+                            </div>
+                            <br>
+                            <center>
+                                <button type="button" onclick="e9CalcularMesesConejos()"
+                                    class="btn btn-outline-success">Circunferencia</button>                               
+                            </center>
+                        </div>
+                        <div class="col-6">
+                            <br>
+                            <center>
+                                <h4 id="e9resultado"></h4>
+                            </center>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-ejer10" role="tabpanel" aria-labelledby="v-pills-ejer10-tab">
+                    <div class="titulo">
+                        <center>
+                            <h4>Este programa calcula el MCD entre dos numeros aplicando el algoritmo de Euclides</h4>
+                        </center>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-4">
+                            <br>
+                            <div class="form-group row">
+                                <label for="nota1" class="col-sm-4 col-form-label">Numero uno</label>
+                                <div class="col-sm-8">
+                                    <input type="number" class="form-control" id="e10numero1"
+                                        placeholder="Ingrese el numero">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="nota1" class="col-sm-4 col-form-label">Numero dos</label>
+                                <div class="col-sm-8">
+                                    <input type="number" class="form-control" id="e10numero2"
+                                        placeholder="Ingrese el numero">
+                                </div>
+                            </div>
+                            <br>
+                            <center>
+                                <button type="button" onclick="e10CalcularMCD()"
+                                    class="btn btn-outline-success">Calcular MCD</button>
+                            </center>
+                        </div>
+                        <div class="col-6">
+                            <br>
+                            <center>
+                                <h4 id="e10resultado"></h4>
+                            </center>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-ejer11" role="tabpanel" aria-labelledby="v-pills-ejer11-tab">
+                    <div class="titulo">
+                        <center>
+                            <h4>Este programa determina si un numero ingresado es primo o no</h4>
+                        </center>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-4">s
+                            <br>
+                            <div class="form-group row">
+                                <label for="nota1" class="col-sm-4 col-form-label">Numero</label>
+                                <div class="col-sm-8">
+                                    <input type="number" class="form-control" id="e11numero"
+                                        placeholder="Ingrese el numero">
+                                </div>
+                            </div>                           
+                            <br>
+                            <center>
+                                <button type="button" onclick="e11CalcularPrimo()"
+                                    class="btn btn-outline-success">Determinar si es Primo</button>
+                            </center>
+                        </div>
+                        <div class="col-6">
+                            <br>
+                            <center>
+                                <h4 id="e11resultado"></h4>
+                            </center>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-ejer12" role="tabpanel" aria-labelledby="v-pills-ejer12-tab">
+                    <div class="titulo">
+                        <center>
+                            <h4>Este programa calcula la suma de la serie 1/1 + 1/2 ... + 1/N</h4>
+                        </center>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-4">
+                            <br>
+                            <div class="form-group row">
+                                <label for="nota1" class="col-sm-4 col-form-label">Valor de N</label>
+                                <div class="col-sm-8">
+                                    <input type="number" class="form-control" id="e12n"
+                                        placeholder="Ingrese el valor de N">
+                                </div>
+                            </div>                          
+                            <br>
+                            <center>
+                                <button type="button" onclick="e12CalcularSuma()"
+                                    class="btn btn-outline-success">Calcular suma</button>
+                            </center>
+                        </div>
+                        <div class="col-6">
+                            <br>
+                            <center>
+                                <h4 id="e12resultado"></h4>
+                            </center>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-ejer13" role="tabpanel" aria-labelledby="v-pills-ejer13-tab">
+                    <div class="titulo">
+                        <center>
+                            <h4>Este programa calcula la suma de la serie 1/1 + 2/2<sup>2</sup> ... + n/2<sup>n</sup></h4>
+                        </center>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-4">
+                            <br>
+                            <div class="form-group row">
+                                <label for="nota1" class="col-sm-4 col-form-label">Valor de n</label>
+                                <div class="col-sm-8">
+                                    <input type="number" class="form-control" id="e13n"
+                                        placeholder="Ingrese el valor de n">
+                                </div>
+                            </div>                          
+                            <br>
+                            <center>
+                                <button type="button" onclick="e13CalcularSuma()"
+                                    class="btn btn-outline-success">Calcular suma</button>
+                            </center>
+                        </div>
+                        <div class="col-6">
+                            <br>
+                            <center>
+                                <h4 id="e13resultado"></h4>
+                            </center>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-ejer14" role="tabpanel" aria-labelledby="v-pills-ejer14-tab">
+                    <div class="titulo">
+                        <center>
+                            <h4>Este programa imprime en pantalla una piramide de * segun el numero de lineas deseado</h4>
+                        </center>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-4">
+                            <br>
+                            <div class="form-group row">
+                                <label for="nota1" class="col-sm-4 col-form-label">Lineas deseadas</label>
+                                <div class="col-sm-8">
+                                    <input type="number" class="form-control" id="e14lineas" placeholder="Ingrese el numero">
+                                </div>
+                            </div>
+                            <br>
+                            <center>
+                                <button type="button" onclick="e14ImprimirLineas()"
+                                    class="btn btn-outline-success">Imprimir</button>
+                            </center>
+                        </div>
+                        <div class="col-6">
+                            <br>
+                            <center>
+                                <h4 id="e14resultado"></h4>
+                            </center>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-ejer15" role="tabpanel" aria-labelledby="v-pills-ejer15-tab">
+                    <div class="titulo">
+                        <center>
+                            <h4>Este programa calcula los numeros perfectos entre 0 y el limite ingresado</h4>
+                        </center>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-4">
+                            <br>
+                            <div class="form-group row">
+                                <label for="nota1" class="col-sm-4 col-form-label">Limite</label>
+                                <div class="col-sm-8">
+                                    <input type="number" class="form-control" id="e15limite" placeholder="Ingrese el limite">
+                                </div>
+                            </div>
+                            <br>
+                            <center>
+                                <button type="button" onclick="e15CalcularPerfectos()"
+                                    class="btn btn-outline-success">Calcular</button>
+                            </center>
+                        </div>
+                        <div class="col-6">
+                            <br>
+                            <center>
+                                <h4 id="e15resultado"></h4>
+                            </center>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-ejer16" role="tabpanel" aria-labelledby="v-pills-ejer16-tab">
+                    <div class="titulo">
+                        <center>
+                            <h4>Este programa el menor N numero entero, tal que la suma de los N primeros numeros sea mayor al valor ingresado</h4>
+                        </center>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-4">
+                            <br>
+                            <div class="form-group row">
+                                <label for="nota1" class="col-sm-5 col-form-label">Valor</label>
+                                <div class="col-sm-7">
+                                    <input type="number" class="form-control" id="e16valor"
+                                        placeholder="Ingrese el valor">
+                                </div>
+                            </div>                       
+                            <br>
+                            <center>
+                                <button type="button" onclick="e16CalcularNTerminos()"
+                                    class="btn btn-outline-success">Calcular</button>
+                            </center>
+                        </div>
+                        <div class="col-6">
+                            <br>
+                            <center>
+                                <h4 id="e16resultado"></h4>
+                            </center>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-ejer17" role="tabpanel" aria-labelledby="v-pills-ejer17-tab">
+                    <div class="titulo">
+                        <center>
+                            <h4>Este progama muestra el mayor, el menor y la media de N terminos, el valor de N varia
+                            </h4>
+                        </center>
+                    </div>
+                    <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col-4">
+                            <br>
+                            <div class="form-group row">
+                                <label for="nota1" class="col-sm-3 col-form-label">Ingrese N</label>
+                                <div class="col-sm-9">
+                                    <input type="number" class="form-control" id="e17nterminos"
+                                        placeholder="Ingrese el numero de terminos">
+                                </div>
+                            </div>
+                            <center>
+                                <button type="button" onclick="e17LlenarN()" class="btn btn-outline-success">Agregar N
+                                    Terminos</button>
+                            </center>
+                            <br>
+                            <div id="e17llenarterminos">
+
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <br>
+                            <center>
+                                <h4 id="e17resultado"></h4>
+                            </center>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>        
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="./retotres.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
